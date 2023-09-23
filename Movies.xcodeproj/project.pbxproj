@@ -17,7 +17,6 @@
 		438AB5EE2ABEC9D500B0A148 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5C92ABEC9D500B0A148 /* NetworkRequest.swift */; };
 		438AB5EF2ABEC9D500B0A148 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5CA2ABEC9D500B0A148 /* NetworkError.swift */; };
 		438AB5F02ABEC9D500B0A148 /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5CC2ABEC9D500B0A148 /* MoviesApp.swift */; };
-		438AB5F22ABEC9D500B0A148 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438AB5CF2ABEC9D500B0A148 /* Preview Assets.xcassets */; };
 		438AB5F32ABEC9D500B0A148 /* MovieModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5D32ABEC9D500B0A148 /* MovieModule.swift */; };
 		438AB5F42ABEC9D500B0A148 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5D62ABEC9D500B0A148 /* MovieRepository.swift */; };
 		438AB5F52ABEC9D500B0A148 /* IMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5D82ABEC9D500B0A148 /* IMovieService.swift */; };
@@ -32,6 +31,13 @@
 		438AB5FE2ABEC9D500B0A148 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5E92ABEC9D500B0A148 /* ContentView.swift */; };
 		438AB5FF2ABEC9D500B0A148 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5EB2ABEC9D500B0A148 /* Movie.swift */; };
 		438AB6022ABECA6400B0A148 /* URLRequestGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB6012ABECA6400B0A148 /* URLRequestGeneratorTests.swift */; };
+		438AB60A2ABED45300B0A148 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 438AB6092ABED45300B0A148 /* Movies.json */; };
+		438AB60D2ABED7E900B0A148 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB60C2ABED7E900B0A148 /* MockData.swift */; };
+		438AB60F2ABED89100B0A148 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB60E2ABED89100B0A148 /* MockNetworkManager.swift */; };
+		438AB6112ABEDA2F00B0A148 /* MockPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB6102ABEDA2F00B0A148 /* MockPostService.swift */; };
+		438AB6132ABEDB3F00B0A148 /* MockPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB6122ABEDB3F00B0A148 /* MockPostRepository.swift */; };
+		438AB6152ABEDBBF00B0A148 /* MockPostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB6142ABEDBBF00B0A148 /* MockPostUseCase.swift */; };
+		438AB6182ABEDF9700B0A148 /* MovieServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB6172ABEDF9700B0A148 /* MovieServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +71,6 @@
 		438AB5C92ABEC9D500B0A148 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		438AB5CA2ABEC9D500B0A148 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		438AB5CC2ABEC9D500B0A148 /* MoviesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesApp.swift; sourceTree = "<group>"; };
-		438AB5CF2ABEC9D500B0A148 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		438AB5D32ABEC9D500B0A148 /* MovieModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModule.swift; sourceTree = "<group>"; };
 		438AB5D62ABEC9D500B0A148 /* MovieRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		438AB5D82ABEC9D500B0A148 /* IMovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMovieService.swift; sourceTree = "<group>"; };
@@ -81,6 +86,13 @@
 		438AB5EB2ABEC9D500B0A148 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		438AB6012ABECA6400B0A148 /* URLRequestGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestGeneratorTests.swift; sourceTree = "<group>"; };
 		438AB6032ABECAE600B0A148 /* Movies.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Movies.xctestplan; sourceTree = "<group>"; };
+		438AB6092ABED45300B0A148 /* Movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
+		438AB60C2ABED7E900B0A148 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		438AB60E2ABED89100B0A148 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		438AB6102ABEDA2F00B0A148 /* MockPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostService.swift; sourceTree = "<group>"; };
+		438AB6122ABEDB3F00B0A148 /* MockPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostRepository.swift; sourceTree = "<group>"; };
+		438AB6142ABEDBBF00B0A148 /* MockPostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostUseCase.swift; sourceTree = "<group>"; };
+		438AB6172ABEDF9700B0A148 /* MovieServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +147,6 @@
 				438AB5CB2ABEC9D500B0A148 /* Application */,
 				438AB5D12ABEC9D500B0A148 /* Modules */,
 				438AB5C62ABEC9D500B0A148 /* Networking */,
-				438AB5CE2ABEC9D500B0A148 /* Preview Content */,
 				438AB5D02ABEC9D500B0A148 /* Resources */,
 				438AB59F2ABEC75E00B0A148 /* Assets.xcassets */,
 				438AB5A12ABEC75E00B0A148 /* Preview Content */,
@@ -155,6 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				438AB5AC2ABEC75F00B0A148 /* MoviesTests.swift */,
+				438AB6162ABEDF7600B0A148 /* MovieModule */,
+				438AB60B2ABED7D100B0A148 /* Mock */,
+				438AB6082ABED43300B0A148 /* Resources */,
 				438AB6002ABECA4A00B0A148 /* Networking */,
 			);
 			path = MoviesTests;
@@ -188,15 +202,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		438AB5CE2ABEC9D500B0A148 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				438AB5CF2ABEC9D500B0A148 /* Preview Assets.xcassets */,
-			);
-			name = "Preview Content";
-			path = "../../MovieList/MovieList/Preview Content";
-			sourceTree = "<group>";
-		};
 		438AB5D02ABEC9D500B0A148 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,9 +221,9 @@
 			isa = PBXGroup;
 			children = (
 				438AB5D32ABEC9D500B0A148 /* MovieModule.swift */,
-				438AB5D42ABEC9D500B0A148 /* Data */,
-				438AB5DC2ABEC9D500B0A148 /* Domain */,
 				438AB5E42ABEC9D500B0A148 /* Presentation */,
+				438AB5DC2ABEC9D500B0A148 /* Domain */,
+				438AB5D42ABEC9D500B0A148 /* Data */,
 			);
 			path = MovieModule;
 			sourceTree = "<group>";
@@ -287,8 +292,8 @@
 		438AB5E12ABEC9D500B0A148 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				438AB5E22ABEC9D500B0A148 /* MovieUseCaseImpl.swift */,
 				438AB5E32ABEC9D500B0A148 /* IMovieUseCase.swift */,
+				438AB5E22ABEC9D500B0A148 /* MovieUseCaseImpl.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -334,6 +339,34 @@
 				438AB6012ABECA6400B0A148 /* URLRequestGeneratorTests.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		438AB6082ABED43300B0A148 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				438AB6092ABED45300B0A148 /* Movies.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		438AB60B2ABED7D100B0A148 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				438AB60C2ABED7E900B0A148 /* MockData.swift */,
+				438AB60E2ABED89100B0A148 /* MockNetworkManager.swift */,
+				438AB6102ABEDA2F00B0A148 /* MockPostService.swift */,
+				438AB6122ABEDB3F00B0A148 /* MockPostRepository.swift */,
+				438AB6142ABEDBBF00B0A148 /* MockPostUseCase.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		438AB6162ABEDF7600B0A148 /* MovieModule */ = {
+			isa = PBXGroup;
+			children = (
+				438AB6172ABEDF9700B0A148 /* MovieServiceTests.swift */,
+			);
+			path = MovieModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +473,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438AB5F22ABEC9D500B0A148 /* Preview Assets.xcassets in Resources */,
 				438AB5A32ABEC75E00B0A148 /* Preview Assets.xcassets in Resources */,
 				438AB5A02ABEC75E00B0A148 /* Assets.xcassets in Resources */,
 			);
@@ -450,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438AB60A2ABED45300B0A148 /* Movies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +526,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				438AB5AD2ABEC75F00B0A148 /* MoviesTests.swift in Sources */,
+				438AB60D2ABED7E900B0A148 /* MockData.swift in Sources */,
+				438AB6112ABEDA2F00B0A148 /* MockPostService.swift in Sources */,
+				438AB6152ABEDBBF00B0A148 /* MockPostUseCase.swift in Sources */,
+				438AB6132ABEDB3F00B0A148 /* MockPostRepository.swift in Sources */,
+				438AB60F2ABED89100B0A148 /* MockNetworkManager.swift in Sources */,
+				438AB6182ABEDF9700B0A148 /* MovieServiceTests.swift in Sources */,
 				438AB6022ABECA6400B0A148 /* URLRequestGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,6 +690,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,6 +719,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

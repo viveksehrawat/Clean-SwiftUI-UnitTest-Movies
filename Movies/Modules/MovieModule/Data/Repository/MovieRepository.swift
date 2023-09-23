@@ -15,12 +15,7 @@ class MovieRepositoryImpl: IMovieRepository {
     }
     
     func fetchMovieList() async throws ->  [MovieDomainListDTO]{
-        do {
-            let response = try await self.service.fetchMoviesFromNetwork()
-            return response.map { $0.toDomain() }
-        }
-        catch{
-            throw error
-        }
+        let response = try await self.service.fetchMoviesFromNetwork()
+        return response.map { $0.toDomain() }
     }
 }
