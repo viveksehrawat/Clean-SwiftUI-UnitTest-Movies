@@ -13,7 +13,6 @@ class MovieServiceTests: XCTestCase{
     var movieService: IMovieService!
     var mockNetworkManager: MockNetworkManager!
     
-    
     override func setUp() {
         super.setUp()
         mockNetworkManager = MockNetworkManager()
@@ -26,20 +25,35 @@ class MovieServiceTests: XCTestCase{
         super.tearDown()
     }
     
-    func testMovieService_Success()  async throws{
+    func testMovieService_Stub_Success_MovieCount()  async throws{
         //Arrange
-        let expectation = expectation(description: "Movie Service on Success")
-        mockNetworkManager.response = MockData.movieResponse
+        let happyNetworkManager = HappyNetworkManagerStub()
+        movieService = MovieServiceImpl(networkManager: happyNetworkManager)
         // Act
-        do {
             let expectedMovies = try await movieService.fetchMoviesFromNetwork()
-            if expectedMovies.count > 0 {
-                expectation.fulfill()
-            }
-        } catch {
-            XCTFail("Failure not expected")
-        }
-        await waitForExpectations(timeout: 3)
+        // Assert
+        XCTAssertEqual(expectedMovies.count, 20)
+    }
+    
+    func test_attempt_is_only_called_once()  async throws{
+        //Arrange
+        let happyNetworkManager = HappyNetworkManagerStub()
+        movieService = MovieServiceImpl(networkManager: happyNetworkManager)
+        // Act
+            let expectedMovies = try await movieService.fetchMoviesFromNetwork()
+        // Assert
+        XCTAssertEqual(expectedMovies.count, 20)
+    }
+    
+    func testMovieService_Mock_Success_MovieCount()  async throws{
+        //Arrange
+        let happyNetworkManager = MockHappyNetworkManager()
+        happyNetworkManager.response = MockData.movieResponse
+        movieService = MovieServiceImpl(networkManager: happyNetworkManager)
+        // Act
+         _ =  try await movieService.fetchMoviesFromNetwork()
+        // Assert
+        XCTAssertEqual(happyNetworkManager.serviceCalled, 1)
     }
     
     func testMovieService_Failure() async throws {
@@ -56,21 +70,45 @@ class MovieServiceTests: XCTestCase{
     
     func testMovieService_MovieCount() async throws {
         // Arrange
-        let expectation = expectation(description: "Movie Count to be 20")
         mockNetworkManager.response = MockData.movieResponse
-        
         // Act
         do {
             let expectedMovies = try await movieService.fetchMoviesFromNetwork()
-            if expectedMovies.count == 20 {
-                expectation.fulfill()
-            }
+            // Assert
+            XCTAssertEqual(expectedMovies.count, 20)
         } catch {
             XCTFail("Failure not expected")
         }
-        
-        // Assert
-        await waitForExpectations(timeout: 3)
     }
+}
+
+// Mark: - Stubs
+class HappyNetworkManagerStub: INetworkManager {
+    func request<T: Decodable>(request: INetworkRequest, responseType: T.Type) async throws -> T where T : Decodable {
+        return MockData.movieResponse as! T
+    }
+}
+
+class SadNetworkManagerStub: INetworkManager {
+        func request<T: Decodable>(request: INetworkRequest, responseType: T.Type) async throws -> T where T : Decodable {
+            throw NetworkError.invalidResponse
+    }
+}
+
+
+// Mark: - Mock
+class MockHappyNetworkManager: INetworkManager {
+    var response: Decodable?
+    var error: Error?
+    var serviceCalled: Int = 0
     
+    func request<T: Decodable>(request: INetworkRequest, responseType: T.Type) async throws -> T where T : Decodable {
+
+        serviceCalled += 1
+        if let response = response {
+            return response as! T
+        } else {
+            throw NetworkError.invalidResponse
+        }
+    }
 }
