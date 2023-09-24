@@ -7,14 +7,12 @@
 
 import Foundation
 
-struct Movie {
+struct Movie: Identifiable {
 
+    let id: UUID = UUID()
     let title: String
-
     let overview: String
-
     let posterPath: String
-
     let releaseDate: String
 
 }

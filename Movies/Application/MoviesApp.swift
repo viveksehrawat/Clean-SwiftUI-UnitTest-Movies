@@ -9,10 +9,12 @@ import SwiftUI
 // https://proandroiddev.com/clean-architecture-data-flow-dependency-rule-615ffdd79e29
 @main
 struct MoviesApp: App {
-        
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: generateMovieViewModel())
+            NavigationView{
+                MovieListView(viewModel: generateMovieViewModel())
+            }
         }
     }
     
