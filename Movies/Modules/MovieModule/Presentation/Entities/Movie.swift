@@ -14,5 +14,6 @@ struct Movie: Identifiable {
     let overview: String
     let posterPath: String
     let releaseDate: String
+    var isFavorite: Bool = false
 
 }

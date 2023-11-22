@@ -12,7 +12,7 @@ struct MovieCellView: View {
     @EnvironmentObject var vm: MovieViewModel
     
     var body: some View {
-        
+    
         VStack {
             thumbnailView()
             Text(movie.title)

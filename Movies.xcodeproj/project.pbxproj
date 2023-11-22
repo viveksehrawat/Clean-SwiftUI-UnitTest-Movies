@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		436FBE842B0E3EBA0065E6AF /* MovieCellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE832B0E3EBA0065E6AF /* MovieCellRow.swift */; };
 		438AB5A02ABEC75E00B0A148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438AB59F2ABEC75E00B0A148 /* Assets.xcassets */; };
 		438AB5A32ABEC75E00B0A148 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438AB5A22ABEC75E00B0A148 /* Preview Assets.xcassets */; };
 		438AB5AD2ABEC75F00B0A148 /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5AC2ABEC75F00B0A148 /* MoviesTests.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		436FBE832B0E3EBA0065E6AF /* MovieCellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellRow.swift; sourceTree = "<group>"; };
 		438AB5982ABEC75C00B0A148 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438AB59F2ABEC75E00B0A148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438AB5A22ABEC75E00B0A148 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -149,7 +151,6 @@
 				438AB5CB2ABEC9D500B0A148 /* Application */,
 				438AB5D12ABEC9D500B0A148 /* Modules */,
 				438AB5C62ABEC9D500B0A148 /* Networking */,
-				438AB5D02ABEC9D500B0A148 /* Resources */,
 				438AB59F2ABEC75E00B0A148 /* Assets.xcassets */,
 				438AB5A12ABEC75E00B0A148 /* Preview Content */,
 			);
@@ -202,13 +203,6 @@
 				438AB5CC2ABEC9D500B0A148 /* MoviesApp.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		438AB5D02ABEC9D500B0A148 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		438AB5D12ABEC9D500B0A148 /* Modules */ = {
@@ -323,6 +317,7 @@
 			children = (
 				438AB5E92ABEC9D500B0A148 /* MovieListView.swift */,
 				438AB6192AC02DBF00B0A148 /* MovieCellView.swift */,
+				436FBE832B0E3EBA0065E6AF /* MovieCellRow.swift */,
 				438AB61B2AC03B4200B0A148 /* MovieDetailView.swift */,
 			);
 			path = Views;
@@ -436,7 +431,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					438AB5972ABEC75C00B0A148 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -516,6 +511,7 @@
 				438AB61A2AC02DBF00B0A148 /* MovieCellView.swift in Sources */,
 				438AB5EF2ABEC9D500B0A148 /* NetworkError.swift in Sources */,
 				438AB5ED2ABEC9D500B0A148 /* URLRequestGenerator.swift in Sources */,
+				436FBE842B0E3EBA0065E6AF /* MovieCellRow.swift in Sources */,
 				438AB5FF2ABEC9D500B0A148 /* Movie.swift in Sources */,
 				438AB5F02ABEC9D500B0A148 /* MoviesApp.swift in Sources */,
 				438AB5FC2ABEC9D500B0A148 /* MovieViewModel.swift in Sources */,
@@ -601,6 +597,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -661,6 +658,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
