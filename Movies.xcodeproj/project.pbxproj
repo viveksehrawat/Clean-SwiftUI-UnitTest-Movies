@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		436FBE842B0E3EBA0065E6AF /* MovieCellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE832B0E3EBA0065E6AF /* MovieCellRow.swift */; };
+		436FBE872B0E4A3A0065E6AF /* MovieDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE852B0E4A3A0065E6AF /* MovieDataModel.xcdatamodeld */; };
+		436FBE8A2B0EF1D70065E6AF /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE892B0EF1D70065E6AF /* CoreDataModel.swift */; };
+		436FBE8D2B10527B0065E6AF /* IMovieOfflineStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE8C2B10527B0065E6AF /* IMovieOfflineStorage.swift */; };
+		436FBE8F2B1053080065E6AF /* MovieOfflineStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE8E2B1053080065E6AF /* MovieOfflineStorageImpl.swift */; };
+		436FBE9A2B105D0E0065E6AF /* Reachablity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE992B105D0E0065E6AF /* Reachablity.swift */; };
+		436FBE9D2B1061190065E6AF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FBE9C2B1061190065E6AF /* DataController.swift */; };
 		438AB5A02ABEC75E00B0A148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438AB59F2ABEC75E00B0A148 /* Assets.xcassets */; };
 		438AB5A32ABEC75E00B0A148 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438AB5A22ABEC75E00B0A148 /* Preview Assets.xcassets */; };
 		438AB5AD2ABEC75F00B0A148 /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AB5AC2ABEC75F00B0A148 /* MoviesTests.swift */; };
@@ -61,6 +67,12 @@
 
 /* Begin PBXFileReference section */
 		436FBE832B0E3EBA0065E6AF /* MovieCellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellRow.swift; sourceTree = "<group>"; };
+		436FBE862B0E4A3A0065E6AF /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		436FBE892B0EF1D70065E6AF /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		436FBE8C2B10527B0065E6AF /* IMovieOfflineStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMovieOfflineStorage.swift; sourceTree = "<group>"; };
+		436FBE8E2B1053080065E6AF /* MovieOfflineStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieOfflineStorageImpl.swift; sourceTree = "<group>"; };
+		436FBE992B105D0E0065E6AF /* Reachablity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachablity.swift; sourceTree = "<group>"; };
+		436FBE9C2B1061190065E6AF /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		438AB5982ABEC75C00B0A148 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438AB59F2ABEC75E00B0A148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438AB5A22ABEC75E00B0A148 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -124,6 +136,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		436FBE882B0E4B5D0065E6AF /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				436FBE892B0EF1D70065E6AF /* CoreDataModel.swift */,
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		436FBE8B2B1052590065E6AF /* OfflineStorage */ = {
+			isa = PBXGroup;
+			children = (
+				436FBE8C2B10527B0065E6AF /* IMovieOfflineStorage.swift */,
+				436FBE8E2B1053080065E6AF /* MovieOfflineStorageImpl.swift */,
+			);
+			path = OfflineStorage;
+			sourceTree = "<group>";
+		};
+		436FBE9B2B1061060065E6AF /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				436FBE852B0E4A3A0065E6AF /* MovieDataModel.xcdatamodeld */,
+				436FBE9C2B1061190065E6AF /* DataController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		438AB58F2ABEC75C00B0A148 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +190,7 @@
 				438AB5D12ABEC9D500B0A148 /* Modules */,
 				438AB5C62ABEC9D500B0A148 /* Networking */,
 				438AB59F2ABEC75E00B0A148 /* Assets.xcassets */,
+				436FBE9B2B1061060065E6AF /* DataModel */,
 				438AB5A12ABEC75E00B0A148 /* Preview Content */,
 			);
 			path = Movies;
@@ -193,6 +232,7 @@
 				438AB5C82ABEC9D500B0A148 /* URLRequestGenerator.swift */,
 				438AB5C92ABEC9D500B0A148 /* NetworkRequest.swift */,
 				438AB5CA2ABEC9D500B0A148 /* NetworkError.swift */,
+				436FBE992B105D0E0065E6AF /* Reachablity.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -227,6 +267,8 @@
 		438AB5D42ABEC9D500B0A148 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				436FBE8B2B1052590065E6AF /* OfflineStorage */,
+				436FBE882B0E4B5D0065E6AF /* CoreDataModels */,
 				438AB5D52ABEC9D500B0A148 /* Repository */,
 				438AB5D72ABEC9D500B0A148 /* Service */,
 				438AB5DA2ABEC9D500B0A148 /* Entities */,
@@ -498,15 +540,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436FBE8A2B0EF1D70065E6AF /* CoreDataModel.swift in Sources */,
 				438AB5FB2ABEC9D500B0A148 /* IMovieUseCase.swift in Sources */,
 				438AB5F82ABEC9D500B0A148 /* IMovieRepository.swift in Sources */,
 				438AB5EC2ABEC9D500B0A148 /* NetworkManager.swift in Sources */,
+				436FBE9A2B105D0E0065E6AF /* Reachablity.swift in Sources */,
+				436FBE872B0E4A3A0065E6AF /* MovieDataModel.xcdatamodeld in Sources */,
 				438AB5F62ABEC9D500B0A148 /* MoviServiceImpl.swift in Sources */,
 				438AB5F42ABEC9D500B0A148 /* MovieRepository.swift in Sources */,
 				438AB5F32ABEC9D500B0A148 /* AsynContentView.swift in Sources */,
 				438AB5FE2ABEC9D500B0A148 /* MovieListView.swift in Sources */,
 				438AB5F92ABEC9D500B0A148 /* MovieDomainListDTO.swift in Sources */,
+				436FBE8F2B1053080065E6AF /* MovieOfflineStorageImpl.swift in Sources */,
 				438AB5F52ABEC9D500B0A148 /* IMovieService.swift in Sources */,
+				436FBE9D2B1061190065E6AF /* DataController.swift in Sources */,
 				438AB61C2AC03B4200B0A148 /* MovieDetailView.swift in Sources */,
 				438AB61A2AC02DBF00B0A148 /* MovieCellView.swift in Sources */,
 				438AB5EF2ABEC9D500B0A148 /* NetworkError.swift in Sources */,
@@ -518,6 +565,7 @@
 				438AB5FA2ABEC9D500B0A148 /* MovieUseCaseImpl.swift in Sources */,
 				438AB5F72ABEC9D500B0A148 /* MovieDataListDTO.swift in Sources */,
 				438AB5EE2ABEC9D500B0A148 /* NetworkRequest.swift in Sources */,
+				436FBE8D2B10527B0065E6AF /* IMovieOfflineStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +895,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		436FBE852B0E4A3A0065E6AF /* MovieDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				436FBE862B0E4A3A0065E6AF /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 436FBE862B0E4A3A0065E6AF /* DataModel.xcdatamodel */;
+			path = MovieDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 438AB5902ABEC75C00B0A148 /* Project object */;
 }

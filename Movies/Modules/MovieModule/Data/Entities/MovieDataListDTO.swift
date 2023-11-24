@@ -16,6 +16,8 @@ struct MovieApiResponse: Codable {
 
 struct MovieDataListDTO: Codable {
 
+    let id: Int
+
     let title: String
 
     let overview: String
@@ -27,6 +29,6 @@ struct MovieDataListDTO: Codable {
 }
 extension MovieDataListDTO {
     func toDomain() -> MovieDomainListDTO{
-        return .init(title: title, overview: overview, posterPath: poster_path, releaseDate: release_date)
+        return .init(movieID: id, title: title, overview: overview, posterPath: poster_path, releaseDate: release_date)
     }
 }

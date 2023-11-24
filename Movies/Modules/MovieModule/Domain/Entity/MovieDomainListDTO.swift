@@ -9,6 +9,8 @@ import Foundation
 
 struct MovieDomainListDTO: Equatable {
 
+    let movieID: Int
+
     let title: String
 
     let overview: String

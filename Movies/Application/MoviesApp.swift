@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 // https://proandroiddev.com/clean-architecture-data-flow-dependency-rule-615ffdd79e29
 @main
 struct MoviesApp: App {
-    
+    @StateObject private var dataController = DataController()
+
     var body: some Scene {
         WindowGroup {
             NavigationView{
@@ -34,7 +36,10 @@ struct MoviesApp: App {
     }
     
     private func generateMovieRepository() -> IMovieRepository {
-        let repository = MovieRepositoryImpl(service: generateMovieService())
+        let repository = MovieRepositoryImpl(
+            movieService: generateMovieService(),
+            movieOfflineServie: generateMovieOffLine()
+        )
         return repository
     }
     
@@ -42,5 +47,12 @@ struct MoviesApp: App {
         let service = MovieServiceImpl(networkManager: networkManager)
         return service
     }
+    
+    private func generateMovieOffLine() -> IMovieOfflineStorage {
+        let storage = MovieOfflineStorageImpl(persistentContainer: dataController.container)
+        return storage
+    }
+    
+    
     
 }
