@@ -9,9 +9,7 @@ import SwiftUI
 // https://dribbble.com/shots/20697408-Movie-app
 struct MovieListView: View {
     @ObservedObject private(set) var viewModel: MovieViewModel
-    
     var body: some View {
-        
         AsyncContentView(source: viewModel) { movies in
             ScrollView{
                 LazyVStack {
